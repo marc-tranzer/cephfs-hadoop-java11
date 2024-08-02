@@ -1,7 +1,7 @@
 CephFS Hadoop Plugin Build with Java11
 =====================
 
-What were changed compared to the master project:
+Changed compared to the forked project:
 
 - Change the compiler version to 3.8.1
 - Add common lang 3 dependency in pom
