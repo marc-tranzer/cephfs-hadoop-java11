@@ -29,7 +29,7 @@ import java.net.InetAddress;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.commons.logging.Log;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import com.ceph.fs.CephMount;
 import com.ceph.fs.CephStat;

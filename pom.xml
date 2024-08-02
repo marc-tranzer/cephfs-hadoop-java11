@@ -47,7 +47,7 @@
 	<url>https://oss.sonatype.org/content/repositories/snapshots</url>
       </snapshotRepository>
     </distributionManagement>
-    
+
     <properties>
     	<hadoop.version>2.4.0</hadoop.version>
     	<libcephfs.version>0.80.5</libcephfs.version>
@@ -60,8 +60,8 @@
 	<version>4.9</version>
 	<scope>test</scope>
       </dependency>
-      
-      <!--  
+
+      <!--
       	 Since HADOOP-9361 just came out, we
       	 will use frozen jars until hadoop-2.4.2 comes out.
       	 Then we can get rid of this custom logic.
@@ -81,15 +81,17 @@
         <version>0.1</version>
 	<scope>system</scope>
 	<systemPath>${project.basedir}/src/test/resources/hadoop-common-3.0.0-SNAPSHOT.jar</systemPath>
-      </dependency>      
-      
-      
-      <dependency>
-	<groupId>org.apache.hadoop</groupId>
-	<artifactId>hadoop-common</artifactId>
-	<version>${hadoop.version}</version>
       </dependency>
-    
+      <dependency>
+	        <groupId>org.apache.hadoop</groupId>
+	        <artifactId>hadoop-common</artifactId>
+	        <version>${hadoop.version}</version>
+      </dependency>
+    <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.15.0</version>
+      </dependency>
       <dependency>
         <groupId>com.ceph</groupId>
         <artifactId>libcephfs</artifactId>
@@ -107,7 +109,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
              <artifactId>maven-compiler-plugin</artifactId>
-             <version>3.1</version>
+             <version>3.8.1</version>
           </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
